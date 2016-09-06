@@ -265,6 +265,10 @@ public class SystemConfiguration
         e.printStackTrace();
       }
     }
+    else if(true) //try hdfs
+    {
+      
+    }
     else
     {
       logger.warn("Properties file does not exist: '" + file.getAbsolutePath() + "'");

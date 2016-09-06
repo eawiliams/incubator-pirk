@@ -111,10 +111,18 @@ public class ResponderCLI
   {
     boolean valid;
 
-    // If we have a local.querier.properties file specified, load it
+    // If we have a local.responder.properties file specified, load it
     if (hasOption(LOCALPROPFILE))
     {
-      SystemConfiguration.loadPropsFromFile(new File(getOptionValue(LOCALPROPFILE)));
+      File file = new File(getOptionValue(LOCALPROPFILE));
+      if(file.exists())
+      {
+        SystemConfiguration.loadPropsFromFile(new File(getOptionValue(LOCALPROPFILE)));
+      }
+      else
+      {
+        
+      }
     }
     else
     {
